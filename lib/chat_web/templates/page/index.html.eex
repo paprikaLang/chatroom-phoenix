@@ -1,6 +1,9 @@
 <div class="container">
 <h2>The winter warmer</h2>
 <div id="chat-box">
+  <%= for message <- @messages do %>
+    <p><b><%= message.name %>:</b> <%= message.body %></p>
+  <% end %>
 </div>
 <br>
 <form id="chat-form">
